@@ -1,0 +1,417 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply Open Sans font to the entire website */
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: none; /* No background color */
+}
+
+.logo img {
+    max-width: 100px; /* Adjust the logo size as needed */
+}
+
+.title {
+    flex-grow: 1; /* Allow the title to grow and take up available space */
+    text-align: center; /* Center-align the title */
+}
+
+.title h1 {
+    font-size: 24px;
+    color: #FF7236;
+}
+
+.menu-toggle {
+    display: none; /* Hidden by default on larger screens */
+    flex-direction: column;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.bar {
+    width: 30px;
+    height: 5px;
+    background-color: #000;
+    margin: 3px 0;
+}
+
+.menu {
+    display: none; /* Hide the menu by default */
+    align-items: center; /* Center-align the menu items */
+    position: absolute; /* Position menu relative to the header */
+    top: 60px; /* Adjust the top position to control the menu's placement */
+    right: 20px;
+    background-color: #f0f0f0; /* Add a background color to the mobile menu */
+    z-index: 1;
+}
+
+.menu-toggle.active + .menu {
+    display: flex; /* Show the menu when the toggle is active */
+    flex-direction: column;
+    padding: 10px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu li {
+    margin: 20px 0;
+    background-color: #ffffff; /* Background color for menu items */
+    border: 2px solid #000; /* Border for menu items */
+    padding: 10px; /* Padding to create a boxy effect */
+    border-radius: 5px; /* Round the corners slightly */
+    transition: background-color 0.3s ease; /* Smooth background color transition on hover */
+}
+
+.menu li:hover {
+    background-color: #C1FF72 /* Change background color on hover */
+}
+
+.menu a {
+    text-decoration: none;
+    color: #FF7236;
+    font-weight: bold;
+}
+
+/* MCQs Section */
+.mcq-section {
+    padding: 20px;
+}
+
+.mcq-section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center; /* Horizontal centering */
+    margin-top: 0; /* Vertical centering */
+    color: #FF7236;
+}
+
+
+.mcq-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.mcq-item {
+    flex-basis: calc(33.33% - 20px); /* Three items per row in desktop view */
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.mcq-item img {
+    max-width: 100%;
+    animation: pulsate 2s ease-in-out infinite; /* Example pulsating animation */
+}
+
+/* Define the pulsating animation keyframes */
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.mcq-item h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.see-more-button {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #FF7236;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Courses Section */
+.course-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.course-section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center; /* Horizontal centering */
+    margin-top: 0; /* Vertical centering */
+    color: #FF7236;
+}
+
+
+.course-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.course-item {
+    flex-basis: calc(33.33% - 20px); /* Three items per row in desktop view */
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.course-item img {
+    max-width: 100%;
+    animation: pulsate 2s ease-in-out infinite; /* Example pulsating animation */
+    
+}
+
+/* Define the pulsating animation keyframes */
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+.course-item h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.course-item .see-more-button {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #FF7236;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+
+
+/* Media Query for Mobile View */
+@media (max-width: 767px) {
+    .menu {
+        display: none; /* Hide the desktop menu in mobile view */
+    }
+
+    .menu-toggle {
+        display: flex; /* Display the menu toggle button in mobile view */
+        margin-top: 10px; /* Add some spacing between the title and menu toggle in mobile view */
+    }
+
+    .menu-toggle.active + .menu {
+        display: flex; /* Show the mobile menu when the toggle is active */
+        
+    }
+
+    .mcq-item,
+    .course-item {
+        flex-basis: 100%; /* Full width for items in mobile view */
+    }
+}
+
+/* ... Previous CSS ... */
+
+/* Media Query for Mobile View */
+@media (max-width: 767px) {
+    .menu {
+        display: none; /* Hide the desktop menu in mobile view */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #f0f0f0;
+        flex-direction: column;
+    }
+
+    .menu.active {
+        display: flex; /* Show the mobile menu when the toggle is active */
+    }
+
+    .menu-toggle {
+        display: flex; /* Display the menu toggle button in mobile view */
+        margin-top: 10px; /* Add some spacing between the title and menu toggle in mobile view */
+    }
+
+    .mcq-item,
+    .course-item {
+        flex-basis: 100%; /* Full width for items in mobile view */
+    }
+}
+
+/* ... Previous CSS ... */
+
+/* Media Query for Desktop View */
+@media (min-width: 768px) {
+    .menu {
+        display: flex; /* Display the desktop menu in desktop view */
+        position: static;
+        top: auto;
+        right: auto;
+        background-color: transparent;
+    }
+
+    .menu ul {
+        flex-direction: row; /* Display menu items horizontally in desktop view */
+    }
+
+    .menu-toggle {
+        display: none; /* Hide the menu toggle button in desktop view */
+    }
+}
+
+/* ... Previous CSS ... */
+
+/* Media Query for Desktop View */
+@media (min-width: 768px) {
+    .menu {
+        display: flex; /* Display the desktop menu in desktop view */
+        position: static;
+        top: auto;
+        right: auto;
+        background-color: transparent;
+    }
+
+    .menu ul {
+        flex-direction: row; /* Display menu items horizontally in desktop view */
+    }
+
+    .menu li {
+        margin-left: 20px; /* Add margin to separate menu items */
+    }
+
+    .menu-toggle {
+        display: none; /* Hide the menu toggle button in desktop view */
+    }
+}
+
+/* Footer styles */
+.footer {
+    background-color: #C1FF72; /* Add a background color for the footer */
+    color: #FF7236; /* Text color for the footer content */
+    text-align: center; /* Center-align the content within the footer */
+    padding: 20px 0; /* Add some padding to the top and bottom of the footer */
+}
+
+.footer-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-menu li {
+    display: inline; /* Display menu items horizontally */
+    margin: 0 20px; /* Add spacing between menu items */
+}
+
+.footer-menu a {
+    text-decoration: none;
+    color: #FF7236; /* Link color in the footer menu */
+    font-weight: bold;
+    font-size: 16px; /* Reduce font size by 2 units (from 18px to 16px) */
+}
+
+.footer-credit {
+    margin-top: 10px; /* Add some space between the menu and the copyright notice */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Modern styling for the expandable list */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.topic {
+    cursor: pointer;
+    padding: 15px;
+    margin: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topic:hover {
+    background-color: #e0e0e0;
+}
+
+.content {
+    display: none;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0 0 5px 5px;
+}
+
+/* Custom video icon using CSS */
+.video-icon11::before {
+    content: "\f03d"; /* Unicode for a video icon (You can replace this with any other icon you prefer) */
+    font-family: FontAwesome;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/* YouTube video container */
+.video-container11 {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container11 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+

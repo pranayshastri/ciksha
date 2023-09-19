@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+	  <link rel="stylesheet" href="css/course.css">
+    <title>CIKSHA</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+    <a href="https://ciksha.com">
+        <img src="logo.png" alt="Logo">
+    </a>
+</div>
+        <div class="title">
+            <h1>CIKSHA</h1>
+        </div>
+        <div class="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="https://ciksha.com/index.html">Home</a></li>
+                <li><a href="https://ciksha.com/mcq.html">MCQ</a></li>
+                <li><a href="https://ciksha.com/courses.html">Courses</a></li>
+            </ul>
+        </nav>
+    </header>
+    <style>
+        /* Modern styling for the expandable list */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .topic {
+            cursor: pointer;
+            padding: 15px;
+            margin: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .topic:hover {
+            background-color: #e0e0e0;
+        }
+
+        .content {
+            display: none;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 0 0 5px 5px;
+        }
+
+        /* Custom video icon using CSS */
+        .video-icon::before {
+            content: "\f03d"; /* Unicode for a video icon (You can replace this with any other icon you prefer) */
+            font-family: FontAwesome;
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        /* YouTube video container */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 30px;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Complete Geomorphology Course For UPSC Civil Service Examination</h1>
+    <div class="topic" onclick="toggleContent(1)">
+        <span>Topic 1</span>
+        <i class="video-icon"></i>
+    </div>
+    <div class="content" id="content1">
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="topic" onclick="toggleContent(2)">
+        <span>Topic 2</span>
+        <i class="video-icon"></i>
+    </div>
+    <div class="content" id="content2">
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="topic" onclick="toggleContent(3)">
+        <span>Topic 3</span>
+        <i class="video-icon"></i>
+    </div>
+    <div class="content" id="content3">
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+	<footer class="footer">
+        <div class="footer-menu">
+            <ul>
+                <li><a href="https://ciksha.com/contact.html">Contact us</a></li>
+                <li><a href="https://ciksha.com/about.html">About us</a></li>
+                <li><a href="https://ciksha.com/privacy.html">Privacy Policy</a></li>
+                <li><a href="https://ciksha.com/terms.html">Terms</a></li>
+            </ul>
+        </div>
+        <div class="footer-credit">
+            &copy; CIKSHA 2023 | All Rights Reserved
+        </div>
+    </footer>
+
+    <!-- Add FontAwesome CDN link for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script>
+        // JavaScript function to toggle content
+        function toggleContent(topicNumber) {
+            var content = document.getElementById('content' + topicNumber);
+            
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+            } else {
+                content.style.display = 'none';
+            }
+        }
+    </script>
+	<script src="main.js"></script>
+</body>
+</html>
